@@ -1,0 +1,118 @@
+/* Containers
+---------------------------------------------------------------------------------------------------- */
+.card {
+  align-items: center;
+  border: 0.1em solid var(--color-foreground-primary);
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 1em;
+  text-align: center;
+  width: 100%;
+}
+
+.card:hover {
+  border: 0.1em solid var(--color-accent);
+  cursor: pointer;
+}
+
+.container {
+  margin-top: auto;
+  width: 100%;
+}
+
+.product {
+  display: grid;
+  gap: 1em;
+  grid-area: 1 / 2 / 2 / 3;
+  grid-auto-rows: min-content;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  justify-content: space-around;
+  padding: 1em;
+}
+
+.productSidebar {
+  display: grid;
+  gap: 1em;
+  grid-auto-rows: min-content;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  justify-content: space-around;
+  padding: 1em;
+}
+
+.rating {
+  align-items: center;
+  display: flex;
+  gap: 0.3em;
+}
+
+.sidebar {
+  background-color: var(--color-background-tertiary);
+  grid-area: 1 / 1 / 2 / 2;
+  height: 100%;
+  overflow-y: auto;
+  padding: 1em 1em 9em 1em;
+  position: fixed;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  width: 19em;
+}
+
+.sidebarVisible {
+  transform: translateX(0);
+}
+
+.store {
+  display: grid;
+  grid-template-columns: 19em 4fr;
+}
+
+.storeSidebar {
+  display: block;
+}
+
+/* Elements
+---------------------------------------------------------------------------------------------------- */
+.icon {
+  height: var(--icon-size-small);
+  width: var(--icon-size-small);
+}
+
+.img {
+  background-color: var(--color-foreground-primary);
+  border-radius: 0.1em;
+  height: var(--image-size-standard);
+  object-fit: contain;
+  width: var(--image-size-standard);
+}
+
+.price {
+  color: var(--color-foreground-primary);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+  text-align: left;
+}
+
+.score {
+  color: var(--color-foreground-primary);
+  font-size: var(--font-size-standard);
+  font-weight: var(--font-weight-regular);
+  text-align: left;
+}
+
+.title {
+  color: var(--color-foreground-primary);
+  font-size: var(--font-size-standard);
+  font-weight: var(--font-weight-regular);
+  margin: 0.5em 0;
+  text-align: left;
+}
+
+/* Media Queries
+---------------------------------------------------------------------------------------------------- */
+@media only screen and (max-width: 743px) {
+  .store {
+    display: block;
+  }
+}

@@ -21,6 +21,7 @@
   /* Font Sizes */
   --font-size-standard: 1.3em;
   --font-size-medium: 1.5em;
+  --font-size-medium-large: 1.7em;
   --font-size-large: 2.1em;
 
   /* Font Weights */
@@ -28,7 +29,11 @@
   --font-weight-bold: 700;
 
   /* Icon Sizes */
+  --icon-size-small: 1.5em;
   --icon-size-standard: 2.7em;
+
+  /* Image Sizes */
+  --image-size-standard: 13em;
 
   /* Effects */
   --effect-icon-opacity: 0.8;
@@ -171,7 +176,7 @@ footer {
 
 /* Media Queries
 ---------------------------------------------------------------------------------------------------- */
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 470px) {
   .header__title {
     display: none;
   }

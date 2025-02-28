@@ -1,0 +1,57 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.label {
+  align-items: center;
+  color: var(--color-foreground-primary);
+  display: flex;
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-regular);
+  gap: 0.5em;
+  padding-left: 0.8em;
+}
+
+.label:hover {
+  color: var(--color-accent);
+  cursor: pointer;
+}
+
+.title {
+  font-size: var(--font-size-medium-large);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Checkbox
+---------------------------------------------------------------------------------------------------- */
+.container {
+  align-items: center;
+  display: flex;
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox:checked + .span::after {
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  content: "";
+  height: 0.5rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.5rem;
+}
+
+.span {
+  border: 0.1em solid var(--color-foreground-primary);
+  border-radius: 50%;
+  display: inline-block;
+  height: 1rem;
+  position: relative;
+  width: 1rem;
+}

@@ -1,10 +1,18 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import cartIcon from "../../assets/icons/cart-icon.svg";
+import sidebarIcon from "../../assets/icons/sidebar-icon.svg";
 
-function Header() {
+function Header({ toggleSidebar }) {
   return (
     <header>
       <div className="header__nav">
+        <img
+          src={sidebarIcon}
+          alt="Sidebar toggle"
+          className="header__icon"
+          onClick={toggleSidebar}
+        />
         <a
           href="https://github.com/Lanezedfer/shopping-cart"
           target="_blank"
@@ -35,5 +43,9 @@ function Header() {
     </header>
   );
 }
+
+Header.propTypes = {
+  toggleSidebar: PropTypes.func.isRequired,
+};
 
 export default Header;
