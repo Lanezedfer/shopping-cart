@@ -34,6 +34,7 @@
 
   /* Image Sizes */
   --image-size-standard: 13em;
+  --image-size-large: 30em;
 
   /* Effects */
   --effect-icon-opacity: 0.8;
