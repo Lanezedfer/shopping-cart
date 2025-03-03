@@ -1,9 +1,14 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { CartContext } from "../context/CartContext.jsx";
 import cartIcon from "../../assets/icons/cart-icon.svg";
 import sidebarIcon from "../../assets/icons/sidebar-icon.svg";
 
 function Header({ toggleSidebar }) {
+  const { cart } = useContext(CartContext);
+  const quantity = new Set(cart.map((item) => item.product.id)).size;
+  
   return (
     <header>
       <div className="header__nav">
@@ -37,7 +42,7 @@ function Header({ toggleSidebar }) {
         </ul>
         <Link to="/cart" style={{ textDecoration: "none" }}>
           <img src={cartIcon} alt="Cart" className="header__icon" />
-          <span className="header__quantity">20</span>
+          {quantity > 0 && <span className="header__quantity">{quantity}</span>}
         </Link>
       </nav>
     </header>
