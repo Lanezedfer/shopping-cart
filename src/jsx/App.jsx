@@ -7,6 +7,7 @@ import Home from "./pages/Home.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import Product from "./pages/Product.jsx";
 import Store from "./pages/Store.jsx";
+import CartProvider from "./provider/CartProvider.jsx";
 
 function App() {
   const [isSidebarVisible, setIsSidebarVisible] = useState(
@@ -23,17 +24,19 @@ function App() {
 
   return (
     <div className="grid-container">
-      <Header toggleSidebar={toggleSidebar} />
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="*" element={<NotFound />}></Route>
-        <Route path="/cart" element={<Cart />}></Route>
-        <Route path="/product/:id" element={<Product />}></Route>
-        <Route
-          path="/store"
-          element={<Store isSidebarVisible={isSidebarVisible} />}
-        ></Route>
-      </Routes>
+      <CartProvider>
+        <Header toggleSidebar={toggleSidebar} />
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="*" element={<NotFound />}></Route>
+          <Route path="/cart" element={<Cart />}></Route>
+          <Route path="/product/:id" element={<Product />}></Route>
+          <Route
+            path="/store"
+            element={<Store isSidebarVisible={isSidebarVisible} />}
+          ></Route>
+        </Routes>
+      </CartProvider>
       <Footer />
     </div>
   );

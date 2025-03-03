@@ -1,0 +1,182 @@
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 1em 0;
+}
+
+.container {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 2fr 1fr;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 1em;
+  width: 100%;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  border: 0.1em solid var(--color-foreground-primary);
+  border-radius: 0.3em;
+  display: grid;
+  grid-template-columns: var(--image-size-standard) 1fr;
+  gap: 1em;
+  padding: 1em;
+}
+
+.quantityContainer {
+  align-items: center;
+  display: flex;
+  gap: 0.3em;
+}
+
+.receipt {
+  border: 0.1em solid var(--color-foreground-primary);
+  border-radius: 0.1em;
+  height: min-content;
+  padding: 1em;
+  position: sticky;
+  top: 7em;
+}
+
+.receiptContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 0;
+}
+
+.btnQuantity {
+  background-color: transparent;
+  border: 0.1em solid var(--color-foreground-primary);
+  border-radius: 0.1em;
+  color: var(--color-foreground-primary);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+  margin: 0.5em 0;
+  padding: 0.1em 0.5em;
+}
+
+.btnQuantity:hover {
+  border: 0.1em solid var(--color-accent);
+  cursor: pointer;
+}
+
+.checkout {
+  background-color: var(--color-accent);
+  border: none;
+  border-radius: 0.1em;
+  color: var(--color-foreground-secondary);
+  display: block;
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+  margin: 0.5em auto;
+  max-width: 10em;
+  padding: 0.5em;
+}
+
+.checkout:hover {
+  background-color: var(--color-accent-hover);
+  cursor: pointer;
+}
+
+.icon {
+  height: var(--icon-size-standard);
+  opacity: var(--effect-icon-opacity);
+  width: var(--icon-size-standard);
+}
+
+.icon:hover {
+  cursor: pointer;
+  opacity: var(--effect-icon-opacity-hover);
+}
+
+.img {
+  background-color: var(--color-foreground-primary);
+  border-radius: 0.1em;
+  height: var(--image-size-standard);
+  margin: 0 auto;
+  object-fit: contain;
+  width: var(--image-size-standard);
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  color: var(--color-foreground-primary);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+  outline: none;
+  text-align: center;
+  width: 3em;
+}
+
+.input:focus {
+  border: 0.1em solid var(--color-accent);
+}
+
+.itemPrice {
+  color: var(--color-accent);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-bold);
+}
+
+.label {
+  font-size: var(--font-size-standard);
+  font-weight: var(--font-weight-regular);
+}
+
+.messageFail {
+  color: var(--color-warning);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+}
+
+.messageSuccess {
+  color: var(--color-accent);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+}
+
+.summary {
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+}
+
+.title {
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+  overflow-wrap: break-word;
+}
+
+.value {
+  font-size: var(--font-size-standard);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Media Queries
+---------------------------------------------------------------------------------------------------- */
+@media only screen and (max-width: 660px) {
+  .container {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .item {
+    display: block;
+  }
+}

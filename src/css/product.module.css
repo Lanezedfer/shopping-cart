@@ -107,6 +107,18 @@
   border: 0.1em solid var(--color-accent);
 }
 
+.messageFail {
+  color: var(--color-warning);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+}
+
+.messageSuccess {
+  color: var(--color-accent);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+}
+
 .price {
   color: var(--color-accent);
   font-size: var(--font-size-large);
@@ -144,5 +156,10 @@
 
   .img {
     margin: 0 auto;
+  }
+
+  .messageFail,
+  .messageSuccess {
+    text-align: center;
   }
 }
